@@ -3,7 +3,8 @@ package main;
 public class Machine {
     private String type;
     private String model;
-    private Worker operator;
+    protected Worker operator;
+    
     public Machine(String type, String model, Worker operator){
         this.type = type;
         this.model = model;
@@ -14,4 +15,5 @@ public class Machine {
         String info = "Koneen tiedot: " + this.type + ", " + this.model;
         return info;
     }
+
 }

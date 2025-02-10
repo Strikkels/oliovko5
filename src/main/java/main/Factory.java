@@ -8,11 +8,11 @@ public class Factory {
 
     public Factory(String name){
         this.name = name;
-        machines = new ArrayList<Machine>();
+        this.machines = new ArrayList<Machine>();
     }
 
     public void addMachine(Machine machine){
-        //arraylististä :DD
+        this.machines.add(machine);
     }
 
     public ArrayList<Machine> getMachines(){

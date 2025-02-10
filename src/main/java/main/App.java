@@ -1,7 +1,6 @@
 package main;
 
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class App 
 {
@@ -39,16 +38,19 @@ public class App
                         System.out.println("Kone lisätty!");
                         break;
                     case 2:
+                        if(factory.getMachines().isEmpty()){
+                            System.out.println("Tehtaassa " + factory.getName() + " ei ole koneita.");
+                            break;
+                        }
                         System.out.println("Tehtaassa " + factory.getName() + " löytyy seuraavat koneet:");
-                        ArrayList<Machine> machines = factory.getMachines();
-                        for(int i = 0; i < machines.size(); i++){
-                            machines.get(i).getMachineDetails();
-                            
-
+                        for(Machine m : factory.getMachines()){
+                            System.out.println(m.getMachineDetails());
+                            System.out.println("Työntekijän tiedot: " + m.operator.getWorkerName() + ", " + m.operator.getWorkerRole());
+                            System.out.println();
                         }
                         break;
                     case 0:
-                        System.out.println("Kiitos ohjelman käytöstä!");
+                        System.out.println("Kiitos ohjelman käytöstä.");
                         exit = true;
                         break;
                     default:
