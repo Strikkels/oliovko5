@@ -42,7 +42,7 @@ public class App
                             System.out.println("Tehtaassa " + factory.getName() + " ei ole koneita.");
                             break;
                         }
-                        System.out.println("Tehtaassa " + factory.getName() + " löytyy seuraavat koneet:");
+                        System.out.println("Tehtaasta " + factory.getName() + " löytyy seuraavat koneet:");
                         for(Machine m : factory.getMachines()){
                             System.out.println(m.getMachineDetails());
                             System.out.println("Työntekijän tiedot: " + m.operator.getWorkerName() + ", " + m.operator.getWorkerRole());
